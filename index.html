@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My App</title>
   <style>
+    :root {
+      --accent: rgb(0,165,0);
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #f1f1f1;
+      --muted: #b3b3b3;
+    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafb;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #007bff, #00c6ff);
+      background: linear-gradient(135deg, var(--accent), #0a0);
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -28,6 +36,7 @@
     header p {
       font-size: 1.2rem;
       margin-top: 10px;
+      color: var(--muted);
     }
 
     .section {
@@ -38,18 +47,18 @@
 
     .download-btn {
       display: inline-block;
-      background: #007bff;
+      background: var(--accent);
       color: white;
       padding: 15px 40px;
       font-size: 1.2rem;
       border-radius: 10px;
       text-decoration: none;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
 
     .download-btn:hover {
-      background: #0056b3;
+      background: #0a0;
       transform: translateY(-2px);
     }
 
@@ -60,10 +69,10 @@
 
     details {
       margin-bottom: 15px;
-      background: #fff;
+      background: var(--card);
       padding: 15px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       cursor: pointer;
     }
 
@@ -71,6 +80,16 @@
       font-weight: bold;
       font-size: 1.1rem;
       outline: none;
+      color: var(--accent);
+    }
+
+    details[open] summary {
+      color: #0f0;
+    }
+
+    details p {
+      margin-top: 10px;
+      color: var(--muted);
     }
 
     /* Table styles */
@@ -78,32 +97,32 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      background: #fff;
+      background: var(--card);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
     th, td {
       padding: 15px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #333;
     }
 
     th {
-      background: #007bff;
+      background: var(--accent);
       color: white;
     }
 
     tr:hover {
-      background: #f1f1f1;
+      background: #222;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
-      color: white;
+      background: #0d0d0d;
+      color: var(--muted);
       margin-top: 40px;
     }
   </style>
@@ -172,4 +191,3 @@
   </footer>
 </body>
 </html>
-
